@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Todo Form</h1>
+    <div class="container">
+        <form id="my-form">
+            <label for="todo">Todo:</label>
+            <input type="text" id="todo" name="todo" placeholder="Enter your todo" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter description"></textarea>
+            <button type="submit">Add Todo</button>
+        </form>
+        <div class="output">
+            <h1 class="pending">Todos Pending</h1>
+            <ul id="todoListPending">
+
+            </ul>
+            <h1 class="done">Todos Done</h1>
+            <ul id="todoListDone">
+
+            </ul>
+            
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
