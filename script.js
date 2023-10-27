@@ -17,7 +17,7 @@ function onSubmit(e) {
 
   axios
     .post(
-      "https://crudcrud.com/api/9af2b78b0ada425f9d908b4195a86cdf/todos",
+      "https://crudcrud.com/api/bf511b7cdc42425baaa5eeaffeca58da/todos",
       myObj
     )
     .then((res) => {
@@ -32,7 +32,7 @@ function onSubmit(e) {
 
 window.addEventListener("DOMContentLoaded", () => {
   axios
-    .get("https://crudcrud.com/api/9af2b78b0ada425f9d908b4195a86cdf/todos")
+    .get("https://crudcrud.com/api/bf511b7cdc42425baaa5eeaffeca58da/todos")
     .then((res) => {
       console.log(res.data);
       for (let i = 0; i < res.data.length; i++) {
@@ -84,7 +84,7 @@ function onEdit(data){
         description:data.description,
         isDone:true
     }
-    axios.put(`https://crudcrud.com/api/9af2b78b0ada425f9d908b4195a86cdf/todos/${data._id}`, newObj)
+    axios.put(`https://crudcrud.com/api/bf511b7cdc42425baaa5eeaffeca58da/todos/${data._id}`, newObj)
     .then((res) => {
         console.log(res.data)
         location.reload()
@@ -93,7 +93,7 @@ function onEdit(data){
 }
 
 function onDelete(id){
-    axios.delete(`https://crudcrud.com/api/9af2b78b0ada425f9d908b4195a86cdf/todos/${id}`)
+    axios.delete(`https://crudcrud.com/api/bf511b7cdc42425baaa5eeaffeca58da/todos/${id}`)
     .then((res) => {
         console.log(res)
         location.reload()
